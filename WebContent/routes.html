@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Routes Example</title>
+<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" 
+rel="stylesheet" type="text/css" />
+<script type="text/javascript"
+src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript"
+src="js/routes.js"></script>
+</head>
+<body onload="initialize()"> 
+<div>
+<strong>Start:</strong>
+<select id="start" onchange="calcRoute();">
+	<option value="Salamanca, Guanajuato">Salamanca</option>
+	<option value="Mexico City, Distrito Federal">Mexico City</option>
+	<option value="Veracruz,Veracruz ">Veracruz</option>
+	<option value="Monterrey, Nuevo Leon">Monterrey</option>
+	<option value="Tampico,Tamaulipas">Tampico</option>
+	<option value="Villahermosa,Tabasco">Tabasco</option>
+	<option value="Poza Rica de Hidalgo">Poza Rica de Hidalgo</option>
+	<option value="Ciudad Victoria,Tamaulipas">Tamaulipas</option>
+	
+	
+</select>  
+<strong>End:</strong>
+<select id="end" onchange="calcRoute();">
+		<option value="Salamanca, Guanajuato">Salamanca</option>
+	<option value="Mexico City, Distrito Federal">Mexico City</option>
+	<option value="Veracruz,Veracruz ">Veracruz</option>
+	<option value="Monterrey, Nuevo Leon">Monterrey</option>
+	<option value="Tampico,Tamaulipas">Tampico</option>
+	<option value="Villahermosa,Tabasco">Tabasco</option>
+	<option value="Poza Rica de Hidalgo,Veracruz">Poza Rica de Hidalgo</option>
+	<option value="Ciudad Victoria,Tamaulipas">Tamaulipas</option>
+</select>
+</div> 
+<h3 >Distance: <strong id="distance">0</strong> Km.  <br /> 
+ Month <strong id="meses">0</strong> <br />
+  Num_Robot <strong id="robot">0</strong>  <br /> 
+</h3>
+
+<table  border=1 style="width: 950 px; height: 1px; margin: 0px; border: 1px solid #000000; padding: 0px; border-collapse: collapse;">
+        <tr bgcolor="5A5AE4">
+ 	 		<td> <h3 align="center">Entry routes: </h3> </td>
+ 	 		<td><h3 align="center"> Exit routes:  </h3></td>
+ 	 		<td><h3 align="center">   Robots:  </h3></td>
+ 	 		<td><h3 align="center"> Total km :  </h3></td>
+ 	 		
+ 	 	</tr>
+
+
+ 	 	<tr bgcolor="72FEAE">
+ 	 		<td> <h4 align="center"><strong id="cbostar">0 </strong>  </h4></td>
+ 	 		<td><h4 align="center"><strong id="endacum1">0  </strong></h4> </td>
+ 	 		<td> <h4 align="center"><strong id=arrbot>0 </strong>  </h4> </td>
+ 	 		<td><h4 align="center"><strong id="arrkm">0  </strong></h4>  </td>
+ 	 	</tr>
+ 	 	<tr bgcolor="72FEAE">
+ 	 	<td> </td>
+ 	 		<td><h3 align="center"><strong >Total: </strong></h3> </td>
+ 	 		<td> <h3 align="center"><strong id="totalr">0</strong><br /></h3> </td>
+ 	 		<td><h3 align="center"><strong id="totaldis">0</strong> Km </h3>  </td>
+ 	 	</tr>
+ 	 	
+</table>
+
+ 
+ 
+<div id="map-canvas"></div>
+</body>
+</html>
